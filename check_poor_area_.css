@@ -1,0 +1,26 @@
+.buttonwa {
+  background: #e6e20c;
+  background-image: -webkit-linear-gradient(top, #e6e20c, #1ca64a);
+  background-image: -moz-linear-gradient(top, #e6e20c, #1ca64a);
+  background-image: -ms-linear-gradient(top, #e6e20c, #1ca64a);
+  background-image: -o-linear-gradient(top, #e6e20c, #1ca64a);
+  background-image: linear-gradient(to bottom, #e6e20c, #1ca64a);
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  font-family: Georgia;
+  color: #d0e7fa;
+  font-size: 25px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.buttonwa:hover {
+  background: #fa3c7e;
+  background-image: -webkit-linear-gradient(top, #fa3c7e, #d99f34);
+  background-image: -moz-linear-gradient(top, #fa3c7e, #d99f34);
+  background-image: -ms-linear-gradient(top, #fa3c7e, #d99f34);
+  background-image: -o-linear-gradient(top, #fa3c7e, #d99f34);
+  background-image: linear-gradient(to bottom, #fa3c7e, #d99f34);
+  text-decoration: none;
+}

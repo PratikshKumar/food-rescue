@@ -1,0 +1,2 @@
+﻿// (c) 2010 CodePlex Foundation
+Type.registerNamespace("Sys.Extended.UI.Seadragon");Sys.Extended.UI.Seadragon.DisplayRect=function(n,t,i,r,u,f){Sys.Extended.UI.Seadragon.DisplayRect.initializeBase(this,[n,t,i,r]);this.minLevel=u;this.maxLevel=f};Sys.Extended.UI.Seadragon.DisplayRect.registerClass("Sys.Extended.UI.Seadragon.DisplayRect",Sys.Extended.UI.Seadragon.Rect);

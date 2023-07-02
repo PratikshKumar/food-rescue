@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Donation multi-step concept for X</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'><link rel="stylesheet" href="./donate_style.css">
+
+</head>
+<style>
+   .menu {
+   padding: 2px;
+   margin-top: 0;
+   width: 100%;
+   max-width: 100%;
+   height: 100px;
+ }
+ .menu .container {
+   padding: 10px;
+ }
+ ul li {
+   max-width: 250px;
+   width: 100%;
+ }
+ ul {
+   display: flex;
+   justify-content: center;
+   column-gap: 5px;
+   list-style: none;
+   margin: auto;
+ }
+ ul li a {
+   text-decoration: none;
+   color:brown;
+   font-size: 18px;
+   font-weight: bold;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   /* background-color: #fa8207; */
+   
+   background-color:#fdd635;
+   display: block;
+   padding: 10px;
+   text-align: center;
+ }
+ ul li:hover ul.dropdown {
+   display: block;
+   animation-name: mainnav;
+   animation-duration: 0.5s;
+   animation-iteration-count: 1;
+   animation-delay: 0s;
+   animation-timing-function: linear;
+ }
+ ul li ul.dropdown {
+   display: none;
+   padding: 0;
+   overflow: hidden;
+ }
+ 
+ /* Mainnav animation */
+ 
+ @keyframes mainnav {
+   0% {
+     height: 0px;
+     /* background-color: #fa8207; */
+   }
+   100% {
+     height: 100px;
+     background-color: transparent;
+   }
+ }
+ 
+ ul li ul.dropdown li {
+   margin: 5px 0;
+ }
+ .menu ul li ul li:first-child {
+   animation-name: navanime;
+   animation-duration: 0.5s;
+   animation-iteration-count: 1;
+   animation-delay: 0s;
+   animation-timing-function: linear;
+ }
+ .menu ul li ul li:nth-child(2) {
+   animation-name: navanime;
+   animation-duration: 0.5s;
+   animation-iteration-count: 1;
+   animation-delay: 0.1s;
+   animation-timing-function: linear;
+ }
+ .menu ul li ul li:nth-child(3) {
+   animation-name: navanime;
+   animation-duration: 0.5s;
+   animation-iteration-count: 1;
+   animation-delay: 0.2s;
+   animation-timing-function: linear;
+ }
+ .menu ul li ul li:nth-child(4) {
+   animation-name: navanime;
+   animation-duration: 0.5s;
+   animation-iteration-count: 1;
+   animation-delay: 0.3s;
+   animation-timing-function: linear;
+ }
+ .menu ul li ul li:nth-child(5) {
+   animation-name: navanime;
+   animation-duration: 0.5s;
+   animation-iteration-count: 1;
+   animation-delay: 0.4s;
+   animation-timing-function: linear;
+ }
+ .menu {
+   position: relative;
+   /* background: rgb(174 90 9); */
+   background-blend-mode: overlay;
+   border-radius: 22px 0 22px 0;
+ }
+ .menu .container > ul:after {
+   height: 49px;
+   max-width: 10%;
+   width: 100%;
+   min-width: 0;
+   background: #fdd635;
+   content: "";
+   position: relative;
+   display: block;
+   border-radius: 0 0 80% / 0 0 99% 0;
+ }
+ .menu .container > ul:before {
+   height: 49px;
+   max-width: 10%;
+   width: 100%;
+   min-width: 0;
+   background: #fdd635;
+   content: "";
+   position: relative;
+   display: block;
+   border-radius: 80% 0 0 0/ 100% 0 0 0;
+ }
+ 
+ /* Navanim animation */
+ 
+ @keyframes navanime {
+   0% {
+     transform: rotateY(180deg);
+   }
+ }
+ ul li a {
+   transition: all 0.2s linear;
+   position: relative;
+   z-index: 1;
+ }
+ ul li > a:after {
+   content: "";
+   background-color: #ffba07;
+   display: block;
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   width: 0%;
+   height: 0%;
+   transition: all 0.3s linear;
+   z-index: -1;
+ }
+ ul li:hover > a:after {
+   color: #fffb00;
+   content: "";
+   background-color: #ffba07;
+   display: block;
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+ }
+ 
+ </style>
+<body  style="  background: linear-gradient(90deg, #0ccda3 10%, #C1FCD3 100%)">
+                         
+<nav>
+   <div class="menu">
+     <div class="container">
+       <ul class="inner-menu">
+         <li><a href="vol_poor_check.php" style="background-color:orange">HOME</a>
+           <!-- <ul class="dropdown">
+             <li><a href="#">Dropdown-menu</a></li>
+             <li><a href="#">Dropdown-menu</a></li>
+           </ul> -->
+         </li>
+         <li><a href="./donate2.html">DONATE</a>
+           
+         </li>
+         <li><a href="logout.php">LOGOUT</a>
+           <!-- <ul class="dropdown">
+             <li><a href="#">Dropdown-menu</a></li>
+             <li><a href="#">Dropdown-menu</a></li>
+           </ul> -->
+         </li>
+         
+         <!-- <li><a href="#" >SIGN-IN</a>
+           <ul class="dropdown">
+             <li><a href="./login.php">ORGANISATION SIGNIN</a></li>
+             <li><a href="./volunteer_login.php">VOLUNTEER-SIGNIN</a></li>
+             
+           </ul>
+         </li> -->
+         
+       </ul>
+     </div>
+   </div>
+ </nav>
+<!-- partial:index.partial.html -->
+<div class="donation-form">
+   <h2>Donate now and back our campaign</h2>
+   <div class="progress-wrap">
+      <div class="line-progress-bar">
+         <div class="line"></div>
+         <ul class="checkout-bar">
+            <li class="progressbar-dots active"><span>Amount</span></li>
+            <li class="progressbar-dots"><span>Detials</span></li>
+            <li class="progressbar-dots"><span>Paymnt</span></li>
+         </ul>
+      </div>
+   </div>
+   <div style="display: flex;">
+   <form id="give-form-51444-1" class="give-form give-form-51444 give-form-type-multi float-labels-enabled give-fl-form give-fl-style-give" action="https://donate.londonreal.tv/freedom-platform/?payment-mode=square" data-id="51444-1" data-currency_symbol="₹" data-currency_code="GBP" data-currency_position="before" data-thousands_separator="," data-decimal_separator="." data-number_decimals="2" method="post" _lpchecked="1">
+      <div class="tab-content">
+         <div class="tab-pane" id="step1">
+            <ul>
+               <li>
+                  <div class="give-total-wrap">
+                     <div class="give-donation-amount form-row-wide">
+                        <span class="give-currency-symbol give-currency-position-before">₹</span>				<label class="give-hidden" for="give-amount">Donation Amount:</label>
+                        <input class="give-text-input give-amount-top" id="give-amount" name="give-amount" type="tel" placeholder="" value="100.00" autocomplete="off" data-amount="100">
+                     </div>
+                  </div>
+                  <div class="errorTxt"></div>
+                  <ul id="give-donation-level-radio-list" class="give-donation-levels-wrap">
+                     <li><input type="radio" data-price-id="0" class="give-radio-input give-radio-input-level give-radio-level-0" value="5.00" name="give-radio-donation-level" id="give-radio-level-0" data-default="0"><label for="give-radio-level-0">₹5</label></li>
+                     <li><input type="radio" data-price-id="1" class="give-radio-input give-radio-input-level give-radio-level-1" value="25.00" name="give-radio-donation-level" id="give-radio-level-1" data-default="0"><label for="give-radio-level-1">₹25</label></li>
+                     <li><input type="radio" data-price-id="2" class="give-radio-input give-radio-input-level give-radio-level-2 give-default-level" value="100.00" name="give-radio-donation-level" id="give-radio-level-2" checked="checked" data-default="1"><label for="give-radio-level-2">₹100</label></li>
+                     <li><input type="radio" data-price-id="3" class="give-radio-input give-radio-input-level give-radio-level-3" value="250.00" name="give-radio-donation-level" id="give-radio-level-3" data-default="0"><label for="give-radio-level-3">₹250</label></li>
+                     <li><input type="radio" data-price-id="4" class="give-radio-input give-radio-input-level give-radio-level-4" value="1,000.00" name="give-radio-donation-level" id="give-radio-level-4" data-default="0"><label for="give-radio-level-4">₹1,000</label></li>
+                     <li><input type="radio" data-price-id="5" class="give-radio-input give-radio-input-level give-radio-level-5" value="5,000.00" name="give-radio-donation-level" id="give-radio-level-5" data-default="0"><label for="give-radio-level-5">₹5,000</label></li>
+                     <li><input type="radio" data-price-id="custom" class="give-radio-input give-radio-input-level give-radio-level-custom" name="give-radio-donation-level" id="give-radio-level-custom" value="custom"><label for="give-radio-level-custom">Custom Amount</label></li>
+                  </ul>
+               </li>
+               <li style="list-style: none; display: inline">
+                  <button class="next-btn next-btn1" type="button">Next</button>
+               </li>
+            </ul>
+         </div>
+         <div class="tab-pane" id="step2">
+            <ul>
+               <li>
+                  <div class="errorTxt"></div>
+                  <div class="col-sm-6">
+                     <div class="input-block">
+                        <label for="">First Name</label>
+                        <input type="text" class="form-control">
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="input-block">
+                        <label for="">Last Name</label>
+                        <input type="text" class="form-control">
+                     </div>
+                  </div>
+                  <div class="col-sm-12">
+                     <div class="input-block">
+                        <label for="">Email</label>
+                        <input type="text" class="form-control">
+                     </div>
+                  </div>
+                  <div class="col-sm-12">
+                     <div class="input-block">
+                        <label for="">Address</label>
+                        <input type="text" class="form-control">
+                     </div>
+                  </div>
+                  <div class="col-sm-12">
+                     <div class="input-block">
+                        <label for="">City</label>
+                        <input type="text" class="form-control">
+                     </div>
+                  </div>
+                  <div class="col-sm-12">
+                     <div class="input-block">
+                        <label for="">County</label>
+                        <input type="text" class="form-control">
+                     </div>
+                  </div>
+                  <div class="col-sm-12">
+                     <div class="input-block">
+                        <label for="">Email</label>
+                        <input type="text" class="form-control">
+                     </div>
+                  </div>
+                  <div class="col-sm-12">
+                     <div class="input-block">
+                        <label for="">Phone</label>
+                        <input type="text" class="form-control">
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <button class="next-btn next-btn2" type="button">Next</button>
+               </li>
+            </ul>
+         </div>
+         <div class="tab-pane" id="step3">
+            <ul>
+               <li>
+<div class="creditCardForm">
+
+            <div class="form-group owner">
+                <label for="owner">Full Name</label>
+                <input type="text" class="form-control" id="owner">
+            </div>
+            <div class="form-group CVV">
+                <label for="cvv">CVV</label>
+                <input type="text" class="form-control" id="cvv">
+            </div>
+            <div class="form-group" id="card-number-field">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" class="form-control" id="cardNumber">
+            </div>
+            <div class="form-group" id="expiration-date">
+                <label>Expiration Date</label>
+                <select>
+                    <option value="01">January</option>
+                    <option value="02">February </option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <select>
+                    <option value="16"> 2016</option>
+                    <option value="17"> 2017</option>
+                    <option value="18"> 2018</option>
+                    <option value="19"> 2019</option>
+                    <option value="20"> 2020</option>
+                    <option value="21"> 2021</option>
+                </select>
+            </div>
+                 </div>
+                  <p>By clicking donate you agree to our terms and privacy policy</p>
+               </li>
+               <li>
+                  <button class="submit-btn" type="submit">Donate</button>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div id="loader" style="display: none;">
+
+      </div>
+   </form>
+   <div>
+      <img src="./qr.jpeg" alt="" style="width: 400px; height: 400px; margin-right: 300px;">
+   </div>
+   </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script><script  src="./donate_script.js"></script>
+
+</body>
+</html>

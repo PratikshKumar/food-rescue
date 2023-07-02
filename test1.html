@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.carousell-container {
+  background: linear-gradient(90deg, #0ccda3 40%, #C1FCD3 60%);
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousell {
+  display: flex;
+  width: 100%;
+  animation: carousellAnimation 10s infinite;
+}
+
+.slidePk {
+  flex: 0 0 100%;
+}
+
+.big-box {
+  display: flex;
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  border: 1px solid #ccc; /* Add a border */
+  height: 200px;
+}
+
+.big-box:hover {
+  transform: scale(1.05);
+}
+
+.big-box .team-member {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.big-box .photopk {
+  flex: 0 0 30%;
+  overflow: hidden;
+}
+
+.big-box .photopk img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.big-box:hover .photopk img {
+  transform: scale(1.1);
+}
+
+.big-box .infopk {
+  flex: 0 0 70%;
+  padding-left: 20px;
+}
+
+.big-box .infopk .textpk {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.big-box h3 {
+  margin: 0 0 5px;
+}
+
+.big-box p {
+  margin: 0;
+}
+
+/* Add a style for the border between left and right sections */
+.big-box .team-member:before {
+  content: "";
+  display: block;
+  width: 1px;
+  background-color: #ccc;
+  height: 80%;
+  margin-right: 20px;
+}
+
+
+@keyframes carousellAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  45% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  70% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  95% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
+}
+
+</style>
+<body>
+    <div class="carousell-container">
+        <div class="carousell">
+
+
+          <div class="slidePk">
+            <div class="big-box">
+              <div class="team-member">
+                <div class="photopk">
+                  <img src="team-member1.jpg" alt="Team Member 1">
+                </div>
+                <div class="infopk">
+                  <div class="textpk">
+                    <h3>Name</h3>
+                    <p>Team Role</p>
+                    <p>Description about user</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat the slidePk structure for other team members -->
+
+          <div class="slidePk">
+            <div class="big-box">
+              <div class="team-member">
+                <div class="photopk">
+                  <img src="team-member1.jpg" alt="Team Member 2">
+                </div>
+                <div class="infopk">
+                  <div class="textpk">
+                    <h3>Name</h3>
+                    <p>Team Role</p>
+                    <p>Description about user</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slidePk">
+            <div class="big-box">
+              <div class="team-member">
+                <div class="photopk">
+                  <img src="team-member1.jpg" alt="Team Member 3">
+                </div>
+                <div class="infopk">
+                  <div class="textpk">
+                    <h3>Name</h3>
+                    <p>Team Role</p>
+                    <p>Description about user</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+        </div>
+      </div>
+      
+      
+</body>
+<script>
+
+</script>
+</html>

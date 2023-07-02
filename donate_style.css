@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300|Oswald');
+
+body {
+  background: #f0f0f0;
+}
+.donation-form form {
+    font-family: 'Roboto', san-serif;
+    max-width: 540px;
+    margin: 15px auto;
+}
+.donation-form form .tab-content ul {
+    align-content: center;
+    margin: 0 0 15px;
+    padding: 0;
+    list-style: none;
+    clear: both;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.give-donation-levels-wrap li {
+    padding: 10px!important;
+    flex: 0 0 auto;
+    width: calc(1 / 3 * 100%);
+
+}
+
+h2 {
+  text-align: center;
+  font-family: Oswald, san-serif;
+  font-size: 2em;
+  padding-bottom: 30px;
+}
+
+#step2 {
+  padding-top: 1em;
+}
+.donation-form form select {
+    -webkit-appearance: none;
+    appearance: none;
+    background-size: 15px;
+    background-position: 97% 50%;
+    width: 49%;
+    display: inline-block;
+    padding: 1em;
+}
+.donation-form form textarea {
+    height: 120px;
+    line-height: 1.5;
+    padding: 15px 28px;
+}
+.donation-form form input:focus, 
+.donation-form form textarea:focus, 
+.donation-form form select:focus {
+    outline: 0;
+    border: 1px solid rgb(211,211,211);
+}
+.donation-form form label {
+    font-size: 18px;
+    font-weight: 300;
+  display: block;
+    margin-bottom: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.give-donation-levels-wrap li:last-child {
+  width: calc(1 / 2 * 100%);
+}
+
+/* Buttons */
+.donation-form form .next-btn,
+.donation-form form .submit-btn {
+    background: #4bd562;
+    padding: 13px 20px;
+    color: #fff;f
+    font-family: oswald, sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    min-width: 400px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 400;
+    border-radius: 0;
+    border: 0;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    width: 100%;
+    cursor: pointer;
+}
+
+.donation-form form .next-btn:hover,
+.donation-form form .submit-btn:hover {
+    background-color: #444b5d;
+    color: #fff;
+}
+
+/* Progress Bar */
+.progress-wrap {
+    margin: auto;
+    display: table;
+    margin: 2em auto;
+}
+.line-progress-bar {
+    display: flex;
+    margin: auto;
+    width: 100%;
+}
+.line {
+    height: 1px;
+    width: 300px;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: #9eeaaa;
+    position: absolute;
+    margin-top: 8px;
+}
+.progress-wrap div ul {
+    display: flex;
+    width: 300px;
+    list-style: none;
+    padding: 0px;
+    margin: initial;
+    justify-content: space-between;
+    z-index: 1;
+}
+.progressbar-dots {
+    display: inline-flex;
+    border: #949494 solid 4px;
+    background: #9eeaaa;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #d4d4d4;
+    font-size: 20px;
+    margin-left: 0px;
+    border: 0px solid rgb(217,217,217);
+}
+.progressbar-dots span {
+    font-size: 14px;
+    line-height: 12px;
+    position: absolute;
+    margin-top: -60px;
+    width: 75px;
+    float: left;
+    color: #474747;
+    font-family: Roboto, sans-serif;
+}
+.progressbar-dots.active {
+    border: 0px solid rgb(38,163,134);
+    background: #4bd562;
+}
+
+/*  Tab */
+.tab-pane {
+    display: none;
+}
+.tab-pane:first-child {
+  display: block;
+}
+
+/* Error */
+span.error {
+  font-size: 12px;
+  font-family: "helvetica neue", arial, sans-serif;
+  color: #D6041D;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+.give-donation-levels-wrap {
+  margin: 10px;
+}
+
+.give-donation-levels-wrap input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.give-donation-levels-wrap label {
+    display: inline-block;
+    background-color: #fff;
+    padding: 10px 20px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 2px solid #263971;
+    border-radius: 4px;
+}
+
+.give-donation-levels-wrap label:hover {
+    background-color: #263971;
+    color: #fff;
+}
+
+.give-donation-levels-wrap input[type="radio"]:focus + label {
+    border: 2px dashed #444;
+}
+
+.give-donation-levels-wrap input[type="radio"]:checked + label {
+    background-color: #263971;
+    border-color: #263971;
+    color: #fff;
+}
+
+form[id*=give-form] .give-donation-amount .give-currency-symbol.give-currency-position-before {
+    border-left: 1px solid #ccc;
+    border-right: none;
+}
+form[id*=give-form] .give-donation-amount .give-currency-symbol {
+    background-color: #f2f2f2;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+    margin: 0;
+    padding: 0 12px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 18px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    position: absolute;
+    left: 5px;
+}
+form[id*=give-form] .give-donation-amount #give-amount, form[id*=give-form] .give-donation-amount #give-amount-text {
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 0;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 12px;
+    margin: 0;
+    font-size: 18px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-width: 125px;
+    float: none;
+    padding-left: 35px;
+    max-width: 175px;
+    text-align: center;
+}
+#give-amount {
+    border: none !important;
+    background: #263971 !important;
+    border-radius: 50px !important;
+    color: #fff;
+    height: 45px;
+    line-height: 35px;
+    font-size: 18px;
+    min-width: 225px;
+}
+
+#give-recurring-form .give-hidden, form.give-form .give-hidden, form[id*=give-form] .give-hidden {
+    display: none;
+}
+[id*=give-form] .give-hidden {
+    display: none;
+}
+
+form[id*=give-form] .give-donation-amount .give-currency-symbol.give-currency-position-before {
+    border-left: 1px solid #ccc;
+    border-right: none;
+}
+
+.donation-form .give-total-wrap .give-currency-symbol, .donation-form .give-total-wrap .give-text-input {
+    display: inline-block!important;
+}
+.donation-form .give-total-wrap input, .donation-form .give-total-wrap span {
+    height: 50px!important;
+    line-height: 50px!important;
+    font-size: 1.6em!important;
+    font-weight: 500;
+    box-sizing: border-box!important;
+}
+.give-donation-amount .give-currency-symbol {
+    background-color: transparent !important;
+    border: none !important;
+    color: #fff !important;
+    left: 44px;
+    position: relative;
+}
+
+.give-donation-amount.form-row-wide {
+  max-width: 175px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.donation-form .give-total-wrap {
+    text-align: center;
+    display: inline-block;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 30px;
+    margin-top: 25px;
+}
+.give-donation-amount .give-currency-symbol {
+    background-color: transparent !important;
+    border: none !important;
+    color: #fff !important;
+    left: 44px;
+    position: relative;
+}
+
+.donation-form .give-total-wrap input, .donation-form .give-total-wrap span {
+    height: 50px!important;
+    line-height: 50px!important;
+    font-size: 1.6em!important;
+    font-weight: 500;
+    box-sizing: border-box!important;
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900);
+.give-form {
+  margin-top: 30px;
+}
+.give-form .input-block {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: solid 1px #d5d5d5 ;
+  width: 100%;
+  height: 60px;
+  padding: 25px;
+  position: relative;
+  margin-bottom: 20px;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.
+give-form .input-block.focus {
+  background-color: #fff;
+  border: solid 1px #d5d5d5
+}
+.give-form .input-block.textarea {
+  height: auto;
+}
+.give-form .input-block.textarea .form-control {
+  height: auto;
+  resize: none;
+}
+.give-form .input-block label {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  display: block;
+  margin: 0;
+  font-weight: 300;
+  z-index: 1;
+  color: #333;
+  font-size: 18px;
+  line-height: 10px;
+}
+.give-form .input-block .form-control {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  font-size: 18px;
+  color: #333;
+}
+.give-form .input-block .form-control:focus label {
+  top: 0;
+}
+.give-form .square-button {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #fb2900;
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 0 60px;
+  height: 60px;
+  border: none;
+  width: 100%;
+}
+.give-form .square-button:hover, .give-form .square-button:focus {
+  background-color: white;
+}
+
+  .contact-wrap {
+    width: 60%;
+    margin: auto;
+  }
+
+.creditCardForm {
+    max-width: 700px;
+    margin: 2em auto;
+    overflow: hidden;
+    padding: 25px;
+    color: #4c4e56;
+}
+.creditCardForm label {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.creditCardForm .heading h1 {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #4c4e56;
+}
+.creditCardForm .payment {
+    float: left;
+    font-size: 18px;
+    padding: 10px 25px;
+    margin-top: 20px;
+    position: relative;
+}
+.creditCardForm .payment .form-group {
+    float: left;
+    margin-bottom: 15px;
+}
+.creditCardForm .payment .form-control {
+    line-height: 40px;
+    height: auto;
+    padding: 0 16px;
+}
+.creditCardForm .owner {
+    width: 63%;
+    margin-right: 10px;
+}
+.creditCardForm .CVV {
+    width: 35%;
+}
+.creditCardForm #card-number-field {
+    width: 100%;
+}
+.creditCardForm #expiration-date {
+    width: 49%;
+}
+.creditCardForm #credit_cards {
+    width: 50%;
+    margin-top: 25px;
+    text-align: right;
+}
+.creditCardForm #pay-now {
+    width: 100%;
+    margin-top: 25px;
+}
+.creditCardForm .payment .btn {
+    width: 100%;
+    margin-top: 3px;
+    font-size: 24px;
+    background-color: #2ec4a5;
+    color: white;
+}
+.creditCardForm .payment select {
+    padding: 10px;
+    margin-right: 15px;
+}
+.transparent {
+    opacity: 0.2;
+}
+    .creditCardForm .owner,
+    .creditCardForm .CVV,
+    .creditCardForm #expiration-date,
+    .creditCardForm #credit_cards {
+        width: 100%;
+    }
+    .creditCardForm #credit_cards {
+        text-align: left;
+    }
+
+.glyphicon {
+  color: red;
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+    .carousell-container {
+      background: linear-gradient(90deg, #0ccda3 40%, #C1FCD3 65%);
+      padding: 20px;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      overflow: hidden;
+      height: 400px;
+    }
+    
+    .carousell {
+      display: flex;
+      width: 100%;
+      animation: carousellAnimation 24s infinite;
+    }
+    
+    .slidePk {
+      flex: 0 0 100%;
+    }
+    
+    .big-box {
+      display: flex;
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 3s ease;
+      border: 1px solid #ccc; /* Add a border */
+      height: 300px;
+    }
+    
+    .big-box:hover {
+      transform: scale(1.05);
+    }
+    
+    .big-box .team-member {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .big-box .photopk {
+      flex: 0 0 30%;
+      overflow: hidden;
+    }
+    
+    .big-box .photopk img {
+      width: 100%;
+      height: auto;
+      transition: transform 3s ease;
+    }
+    
+    .big-box:hover .photopk img {
+      transform: scale(1.1);
+    }
+    
+    .big-box .infopk {
+      flex: 0 0 70%;
+      padding-left: 20px;
+    }
+    
+    .big-box .infopk .textpk {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .big-box h3 {
+      margin: 0 0 5px;
+    }
+    
+    .big-box p {
+      margin: 0;
+    }
+    
+    /* Add a style for the border between left and right sections */
+    .big-box .team-member:before {
+      content: "";
+      display: block;
+      width: 1px;
+      background-color: #ccc;
+      height: 80%;
+      margin-right: 20px;
+    }
+    
+    @keyframes carousellAnimation {
+      0%, 16.66% {
+        transform: translateX(0);
+      }
+      20%, 36.66% {
+        transform: translateX(-100%);
+      }
+      40%, 56.66% {
+        transform: translateX(-200%);
+      }
+      60%, 76.66% {
+        transform: translateX(-300%);
+      }
+      80%, 100% {
+        transform: translateX(-400%);
+      }
+    }
+    
+    </style>
+<body>
+    
+    <div class="carousell-container" >
+        <div class="carousell" >
+
+
+          <div class="slidePk" >
+            <div class="big-box" >
+              <div class="team-member">
+                <div class="photopk">
+                  <img src="./pb2.jpg" alt="Team Member 1">
+                </div>
+                <div class="infopk" style="display: flex;" >
+                  <div class="textpk">
+                    <h2><b>Pratham Bhatia</b></h2>
+                    <br> 
+                    <b><h3>Team Leader</h3></b>
+                    
+                  </div>
+                  <div class="textpk" style="margin-left: 20px;">
+                    <p>Contribution: </p> 
+                    <p>* Implemented Security and Authentication </p>
+                    <p>* Overall project management and coordination. </p>
+                       <p>* Design and architecture of the application. </p>
+                       <p>* Implemented core functionality and critical features. </p>
+                       <p>* Conducted code reviews and ensured coding standards. </p>
+                        * Provided guidance and support to other team members.
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat the slidePk structure for other team members -->
+
+          <!-- Repeat the slidePk structure for other team members -->
+
+          <div class="slidePk">
+            <div class="big-box">
+              <div class="team-member">
+                <div class="photopk">
+                  <img src="./rkb.jpg" alt="Team Member 1">
+                </div>
+                <div class="infopk" style="display: flex;" >
+                  <div class="textpk">
+                    
+                    <h2><b>Rohan Kumar</b></h2>
+                    <br> 
+                    <b><h3>Backend Developer</h3></b>
+                    
+                  </div>
+                  <div class="textpk" style="margin-left: 20px;">
+                    <p>Contribution: </p>
+                    <p>* Designed and developed the database schema. </p>
+                    <p>* Implemented core backend functionality.</p>
+                       <p>* Implemented data access and storage using SQL queries. </p>
+                       <p>* Implemented core functionality and critical features. </p>
+                       
+                       <p>* Optimized backend code for performance and scalability.</p>
+                        <!-- Provided guidance and support to other team members. -->
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat the slidePk structure for other team members -->
+
+          <div class="slidePk">
+            <div class="big-box">
+              <div class="team-member">
+                <div class="photopk">
+                  <img src="./pk.jpg" alt="Team Member 1">
+                </div>
+                <div class="infopk" style="display: flex;" >
+                  <div class="textpk">
+
+                    <h2><b>Pratiksh</b></h2>
+                    <br> 
+                    <b><h3>Frontend and</h3></b>
+                    <b><h3> Backend Developer</h3></b>
+                    
+                  </div>
+                  <div class="textpk" style="margin-left: 20px;">
+                    <p>Contribution: </p> 
+                    <p>* Implemented frontend and backend integration.</p>
+                       <p>* Collaborated with backend developers to display data </p>
+                       <p>* Assisted in debugging & resolving backend issues. </p>
+                       <p>* Developed specific backend modules. </p>
+                       <p>* Assisted with backend development tasks as needed.</p>
+                       <!-- <p>* Ensured coding standards. </p> -->
+                   
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat the slidePk structure for other team members -->
+
+
+          <div class="slidePk">
+            <div class="big-box">
+              <div class="team-member">
+                <div class="photopk">
+                  <img src="./gv2.jpg" alt="Team Member 1">
+                </div>
+                <div class="infopk" style="display: flex;" >
+                  <div class="textpk">
+                  
+                    <h2><b>Girisha Vashisht</b></h2>
+                    <br> 
+                    <b><h3>FrontEnd Developer</h3></b>
+                    
+                  </div>
+                  <div class="textpk" style="margin-left: 20px;">
+                    <p>Contribution: </p> 
+                    <p>* Developed the user interface and responsive design </p>
+                       <!-- <p>* Implemented responsive design </p> -->
+                      <p>* Ensured cross-browser compatibility.</p>
+                       <p>* Handled user input validation and form submissions. </p>
+                       <p>* Conducted testing related to the frontend. </p>
+                       <p>* Prepared technical documentation for the project.</p>
+                       <!-- <p>* Collaborated with team to ensure documentation accuracy.</p> -->
+                        <!-- Provided guidance and support to other team members. -->
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat the slidePk structure for other team members -->
+
+
+          <div class="slidePk">
+            <div class="big-box">
+              <div class="team-member">
+                <div class="photopk">
+                  <img src="./vg.jpg" alt="Team Member 1">
+                </div>
+                <div class="infopk" style="display: flex;" >
+                  <div class="textpk">
+                    
+                    
+                    <h2><b>Vanshika Garg</b></h3>
+                    <br> 
+                    <b><h3>Quality Assurance</h3></b>
+                    <h3>Tester</h3></b>
+                    
+                  </div>
+                  <div class="textpk" style="margin-left: 20px;">
+                    <p>Contribution: </p> 
+                    <p>* Performed system testing and usability testing. </p>
+                       <p>* Collaborated with the QA team for bug tracking.</p>
+                       <p>* Performed functional testing of the application.</p>
+                       <!-- <p>* Collaborated with the backend and frontend teams to ensure overall quality. </p> -->
+                       <p>* Maintained project documentation and version control.</p>
+                       <p>* Assisted with other tasks related to project documentation.</p>
+                        <!-- Provided guidance and support to other team members. -->
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat the slidePk structure for other team members -->
+          
+
+
+
+          
+
+          
+
+
+
+
+
+
+        </div>
+      </div>
+
+
+
+        <!-- --------------------------------- -->
+        
+
+
+</body>
+</html>
